@@ -20,7 +20,7 @@ class TestUserLogin(unittest.TestCase):  # 类必须Test开头，继承TestCase�
         print ("userId:      ",userid[0])
         return userid[0]
 
-'''
+
     def test_print_userid(self):   # 前台登录
         print("1")
         #print("userId",self.test_user_login_normal())
@@ -31,7 +31,7 @@ class TestUserLogin(unittest.TestCase):  # 类必须Test开头，继承TestCase�
         res = requests.post(url=config.url+self.path, data=json.dumps(data),headers = config.headers)
         print(res.text)
         self.assertIn('密码错误', res.text)  # 断言
-'''
+
 
 if __name__ == '__main__':  # 如果是直接从当前模块执行（非别的模块调用本模块）
     unittest.main(verbosity=2)    # 运行本测试类所有用例,verbosity为结果显示级别
